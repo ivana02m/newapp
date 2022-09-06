@@ -1,0 +1,16 @@
+Style
+.Header-root{
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    nav {
+   display: flex;
+   align-items: center;
+    }
+    a{
+        margin: 10px;
+    }
+}
