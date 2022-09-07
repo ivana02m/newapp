@@ -1,16 +1,21 @@
-Style
-.Header-root{
-    background-color: lightcoral;
+.header1{
+    padding: 20px 50px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 26px;
     display: flex;
-    justify-content: space-between;
-
-
-
-    nav {
-   display: flex;
-   align-items: center;
-    }
-    a{
-        margin: 10px;
-    }
-}
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  span{
+    padding: 3px 3px;
+    border-top: 1px  solid #148268;
+    border-bottom: 1px solid #148268;
+    border-left: 1px solid #148268;
+    border-right:1px solid #148268 ;
+    border-radius: 50%;
+    text-align: center;
+  }
+  

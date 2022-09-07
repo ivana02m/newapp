@@ -1,0 +1,46 @@
+.navbar{
+    background-color: cadetblue;
+    max-width:250px;
+    min-height: 700px;
+    list-style-type: none;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    margin: 15px;
+    font-size: larger;
+}
+.link{
+    list-style-type: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    margin: 20px;
+    
+}
+
+.active {
+    background-color: whitesmoke;
+    text-decoration: none;
+} 
+
+a:link{
+    color:#666666;
+    }
+    a:visited{
+    color:#003300;
+    }
+    a:hover{
+    color:#006600;
+    }
+    a:active{
+    color:#006600;
+    }
+
+

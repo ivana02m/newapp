@@ -1,16 +1,16 @@
-import {React, Component} from 'react'
+import {React,Component } from 'react'
 import './header.css'
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }
-  render() { 
+const Header = (props) => {
+  
     return ( 
-      <div>
-        Application
+      <div className="header1">
+      
+        <h2>Application</h2>
+        
       </div>
      );
-  }
+  
 }
+ 
+export default Header;
