@@ -1,0 +1,54 @@
+{ 
+    "person":   [
+        
+     { 
+    
+     "id":"1",
+     "name":"John",
+     "surname":"Anders",
+     "userType":"Employee",
+     "createdDate":"1.2.2022.",
+     "city":"New York",
+     "address":"Park ave"
+    
+    },
+
+    { 
+    
+        "id":"2",
+        "name":"Ann",
+        "surname":"Watson",
+        "userType":"Programmer",
+        "createdDate":"31.1.2022.",
+        "city":"Olympia",
+        "address":"Black lake"
+       
+    },
+
+    { 
+    
+        "id":"3",
+        "name":"Harry",
+        "surname":"Potter",
+        "userType":"Wizard",
+        "createdDate":"12.12.2021.",
+        "city":"Surrey",
+        "address":"Privet drive"
+       
+    },
+
+    { 
+    
+        "id":"4",
+        "name":"Susann",
+        "surname":"Smith",
+        "userType":"Employee",
+        "createdDate":"2.2.2022.",
+        "city":"New York",
+        "address":"Park ave"
+       
+    }
+
+
+  ]
+ }

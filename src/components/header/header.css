@@ -1,6 +1,6 @@
 .header1{
     padding: 20px 50px;
-    background-color: darkcyan;
+    background-color:#092147;
     color: white;
     font-size: 26px;
     display: flex;
@@ -11,10 +11,10 @@
   
   span{
     padding: 3px 3px;
-    border-top: 1px  solid #148268;
-    border-bottom: 1px solid #148268;
-    border-left: 1px solid #148268;
-    border-right:1px solid #148268 ;
+    border-top: 1px  solid #092147;
+    border-bottom: 1px solid #092147;
+    border-left: 1px solid #092147;
+    border-right:1px solid #092147 ;
     border-radius: 50%;
     text-align: center;
   }
