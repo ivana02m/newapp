@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import "./sf.css"
 
 export default function Searchfilter(){
 const[data,setData]=useState([]);
@@ -36,18 +37,19 @@ setFilterVal(e.target.value)
 
 return (
       
-     <div>
-      <div>
-         <input type="search" placeholder="search" value={filterVal} onInput={(e)=>handleFilter(e)}/>
+     <div className="tab">
+      <div className="sb">
+         <input type="search" placeholder="type..." value={filterVal} onInput={(e)=>handleFilter(e)}/>
+         <button class="searchButton">Search</button>
         </div>
     <table>
-     <th>id</th>
-    <th>name</th>
-    <th>surname</th>
-    <th>user type</th>
-    <th>created date</th>
-    <th>city</th>
-    <th>address</th>
+     <th>ID</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>User type</th>
+    <th>Created date</th>
+    <th>City</th>
+    <th>Address</th>
 {
 data.map(item=>{
 return(
