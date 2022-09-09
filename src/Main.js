@@ -4,8 +4,8 @@ import { useState } from "react";
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 //import DisplayTable from "./components/navbar/DisplayTable";
-import Dropdown from "./components/Dropdown";
-import Searchfilter from "./search-filter";
+//import Dropdown from "./components/Dropdown";
+//import Searchfilter from "./search-filter";
 
 
 export default function App() {
@@ -14,14 +14,9 @@ export default function App() {
     <div className="App">
           <Header></Header>
           <Navbar></Navbar>
-       {/* custom dropdown menu */}
-         <Dropdown selected={selected} setSelected={setSelected} />
-          <br />
-          <br />
-         <br />
-        {selected}
+      
 
-        <Searchfilter></Searchfilter>
+        
         
 
          
@@ -29,3 +24,11 @@ export default function App() {
   );
 }
 
+/*<Searchfilter></Searchfilter>*/
+
+ /*{/* custom dropdown menu */
+ /*  <Dropdown selected={selected} setSelected={setSelected} />
+     <br />
+     <br />
+    <br />
+     {selected}*/
