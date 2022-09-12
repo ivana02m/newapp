@@ -21,15 +21,15 @@ fetch("http://localhost:3000/person")
  fetchData();
 },[])
 const handleFilter=(e)=>{
-if (e.target.value==""){
-setData(searchApiData)
-}else{
- const filterResult=searchApiData.filter(item=>item.name.toLowerCase().includes(e.target.value.toLowerCase()) || item.surname.toLowerCase().includes(e.target.value.toLowerCase()))
- if(filterResult.length>0){
+      if (e.target.value==""){
+      setData(searchApiData)
+     }else{
+     const filterResult=searchApiData.filter(item=>item.name.toLowerCase().includes(e.target.value.toLowerCase()) || item.surname.toLowerCase().includes(e.target.value.toLowerCase()))
+     if(filterResult.length>0){
     setData(filterResult)
- }else{
+    }else{
     setData([{"name":"No Data"}])
-   }
+  }
 
 }
 setFilterVal(e.target.value)
@@ -39,8 +39,10 @@ return (
       
      <div className="tab">
       <div className="sb">
-         <input type="search" placeholder="type..." value={filterVal} onInput={(e)=>handleFilter(e)}/>
-         <button class="searchButton">Search</button>
+      <input type="search" placeholder="type..." value={filterVal} onChange={(e)=>handleFilter(e)}></input>
+      <button onClick={handleFilter}>Search</button>
+      
+
         </div>
     <table>
      <th>ID</th>
@@ -69,3 +71,37 @@ return(
 </div>
 )
 }
+
+
+
+//<input type="text" placeholder="type..."/>
+//<button class="searchButton" value={filterVal} onClick={()=>handleFilter(filterVal)}>search</button>  
+
+
+
+
+
+
+//<input type="text" placeholder="type..." value={filterVal} onInput={(e)=>handleFilter(e)}  />
+//<button class="searchButton" onClick={()=>handleFilter(filterVal)}>search</button>  
+
+
+
+
+
+
+
+
+
+//<button class="searchButton">Search</button>
+// <button class="searchButton" type="button" value="search">Search</button>
+
+
+// <input type="search" placeholder="type..." value={filterVal} <button> onInput={(e)=>handleFilter(e)}</button>/>
+//<button class="searchButton" onClick={handleFilter}>search</button>
+
+
+
+
+//<input type="text" onChange={e=>setValue(e.target.value)} />
+//<button onClick={()=>setSearched(value)}>search</button>

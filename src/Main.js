@@ -16,9 +16,7 @@ export default function App() {
           <Navbar></Navbar>
       
 
-        
-        
-
+      
          
     </div>
   );
