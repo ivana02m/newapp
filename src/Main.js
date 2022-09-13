@@ -16,13 +16,12 @@ export default function App() {
           <Navbar></Navbar>
       
 
-      
-         
+
     </div>
   );
 }
 
-/*<Searchfilter></Searchfilter>*/
+
 
  /*{/* custom dropdown menu */
  /*  <Dropdown selected={selected} setSelected={setSelected} />
@@ -30,3 +29,4 @@ export default function App() {
      <br />
     <br />
      {selected}*/
+     /*<Searchfilter></Searchfilter>*/

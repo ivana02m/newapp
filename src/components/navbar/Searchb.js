@@ -1,23 +1,8 @@
-import React from "react";
-/*class Contact extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Contact</h2>
-       
-      </div>
-    );
-  }
-}
- 
-export default Contact;*/
-
-
 import { useState,useEffect } from "react";
 //import "./styles.css";
 //var data = require("http://localhost:3000/person");
 
-export default function App() {
+export default function Searchbar() {
     const[data,setData]=useState([]);
     const[searchApiData, setSearchApiData]=useState([]);
     //const[filterVal,setFilterVal]=useState("");
@@ -34,7 +19,7 @@ export default function App() {
         },[])
 
 
-        /*const handleFilter=(e)=>{
+        const handleFilter=(e)=>{
             if (e.target.value==""){
             setData(searchApiData)
            }else{
@@ -47,7 +32,7 @@ export default function App() {
       
       }
       setFilterVal(e.target.value)
-    }*/
+    }
 
   const [value, setValue] = useState("");
 
@@ -99,4 +84,3 @@ export default function App() {
     </div>
   );
 }
-
