@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import Ssearch from "./Ssearch"
  
 class About extends Component {
   render() {
     return (
       <div>
         <h2>About</h2>
+        <Ssearch></Ssearch>
       </div>
     );
   }
