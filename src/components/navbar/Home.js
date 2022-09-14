@@ -3,6 +3,7 @@ import { useState } from "react";
 import Dropdown from "../Dropdown";
 import Searchfilter from "../../search-filter";
 import "./home.css"
+//import DyTable from "./DyTable";
  
 /*class Home extends Component {
   render() {
@@ -18,6 +19,8 @@ import "./home.css"
         {selected}
 
         <Searchfilter></Searchfilter>
+
+        
 
       </div>
     );
@@ -37,6 +40,9 @@ export default function Home() {
       <Dropdown selected={selected} setSelected={setSelected} />
        
         <Searchfilter></Searchfilter>
+        
+
+
          
     </div>
   );
@@ -44,3 +50,5 @@ export default function Home() {
 
 
 //{selected}
+
+//<DyTable></DyTable>

@@ -1,4 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
+ 
+class About extends Component {
+  render() {
+    return (
+      <div>
+        <h2>About</h2>
+      </div>
+    );
+  }
+}
+ 
+export default About;
+
+
+/*t from "react";
 import CreateList from "./CreateList";
 import Lists from "./Lists";
 
@@ -92,14 +107,14 @@ class App extends React.Component {
 
   getList(event, id) {
     this.setState(
-      {
+      /*{
         singledata: {
           title: "Loading...",
           author: "Loading..."
         }
-      },
-      () => {
-        fetch("http://localhost:3000/person" + id)
+      },*/
+      /*() => {
+        fetch("http://localhost:3000/person"+ id )
           .then(res => res.json())
           .then(result => {
             this.setState({
@@ -119,7 +134,7 @@ class App extends React.Component {
   }
 
   updateList(event, id) {
-    fetch("http://localhost:3000/person/" + id, {
+    fetch("http://localhost:3000/person/id", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -144,7 +159,7 @@ class App extends React.Component {
   }
 
   deleteList(event, id) {
-    fetch("http://localhost:3000/person/" + id, {
+    fetch("http://localhost:3000/person" +id, {
       method: "DELETE"
     })
       .then(res => res.json())
@@ -200,7 +215,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App;*/
 
 
 
@@ -253,19 +268,7 @@ export default About;*/
 
 
 
-/*import React, { Component } from "react";
- 
-class About extends Component {
-  render() {
-    return (
-      <div>
-        <h2>About</h2>
-      </div>
-    );
-  }
-}
- 
-export default About;*/
+
 
 
 

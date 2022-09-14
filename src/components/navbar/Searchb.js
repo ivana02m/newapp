@@ -1,11 +1,11 @@
+import React, {Component}from "react";
 import { useState,useEffect } from "react";
-//import "./styles.css";
-//var data = require("http://localhost:3000/person");
+
 
 export default function Searchbar() {
     const[data,setData]=useState([]);
     const[searchApiData, setSearchApiData]=useState([]);
-    //const[filterVal,setFilterVal]=useState("");
+    const[filterVal,setFilterVal]=useState("");
     useEffect(()=>{
         const fetchData=()=>{
         fetch("http://localhost:3000/person")
@@ -19,7 +19,7 @@ export default function Searchbar() {
         },[])
 
 
-        const handleFilter=(e)=>{
+        /*const handleFilter=(e)=>{
             if (e.target.value==""){
             setData(searchApiData)
            }else{
@@ -32,7 +32,7 @@ export default function Searchbar() {
       
       }
       setFilterVal(e.target.value)
-    }
+    }*/
 
   const [value, setValue] = useState("");
 
@@ -40,8 +40,9 @@ export default function Searchbar() {
 
   const onChange = (event) => {
     setValue(event.target.value);
-  };
+  }
 
+  
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
     // our api to fetch the search result
@@ -50,8 +51,6 @@ export default function Searchbar() {
 
   return (
     <div >
-      <h1>Search</h1>
-
       <div className="search-container">
         <div className="search-inner">
           <input type="text" value={value} onChange={onChange} />
