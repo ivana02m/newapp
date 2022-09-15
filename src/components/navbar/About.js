@@ -33,7 +33,7 @@ class App extends React.Component {
         userType: "",
         createdDate: "",
         city: "",
-         address: ""
+        address: ""
       }
     };
     this.getLists = this.getLists.bind(this);
