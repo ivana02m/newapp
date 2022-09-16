@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 //import { Row, Form, Col, Button } from 'react-bootstrap';
 
 class AddPerson extends React.Component {
@@ -48,7 +48,7 @@ class AddPerson extends React.Component {
       pageTitle = <h2>Add Product</h2>
     }*/
 //{pageTitle}
-    return(
+    /*return(
       <div>
         <table>
         <tr>
@@ -136,4 +136,4 @@ class AddPerson extends React.Component {
   }
 }
 
-export default AddPerson;
+export default AddPerson;*/

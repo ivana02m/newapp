@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 export default class DyTable extends React.Component {
   constructor(props) {
     super(props);
@@ -102,4 +102,4 @@ export default class DyTable extends React.Component {
       </div>
     );
   }
-}
+}*/

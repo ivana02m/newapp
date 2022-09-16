@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import UpdateList from './UpdateList';
 import DeleteList from './DeleteList';
 
@@ -49,4 +49,4 @@ function Lists(props) {
     )
 }
 
-export default Lists;
+export default Lists;*/

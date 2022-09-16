@@ -1,12 +1,12 @@
-/*import React, {Component}from "react";
-
+import React, {Component}from "react";
+import ForContact1 from "./ForContact1";
 
 class Contact extends Component {
   render() {
     return (
       <div>
         <h2>Contact</h2>
-
+        <ForContact1></ForContact1>
       
        
       </div>
@@ -14,9 +14,160 @@ class Contact extends Component {
   }
 }
  
-export default Contact;*/
+export default Contact;
 
-import React, { Component } from 'react';
+/*import React, { useState, useEffect } from 'react';
+//import './App.css';
+//import MaterialTable from 'material-table'
+
+
+function Pp() {
+  const url = ("http://localhost:3000/person")
+  const [data, setData] = useState([])
+  useEffect(() => {
+    getPerson()
+  }, [])
+
+  const getPerson = () => {
+    fetch(url).then(resp => resp.json())
+      .then(resp => setData(resp))
+  }
+  const columns = [
+    { title: "id", field: "id", validate: rowData => rowData.id === undefined || rowData.id === "" ? "Required" : true },
+    {
+      title: "name", field: "name",
+      validate: rowData => rowData.name === undefined || rowData.name=== "" ? "Required" : true
+    },
+    {
+      title: "surname", field: "surname",
+      validate: rowData => rowData.surname === undefined || rowData.surname === "" ? "Required" : true
+    },
+    {
+      title: "userType", field: 'userType',
+      validate: rowData => rowData.userType === undefined || rowData.fee === "" ? "Required" : true
+    }
+  
+    /*{
+      title: "createdDate", field: "createdDate",
+      validate: rowData => rowData.createdDate === undefined || rowData.createdDate=== "" ? "Required" : true
+    },*/
+    /*{
+      title: "city", field: "city",
+      validate: rowData => rowData.surname === undefined || rowData.surname === "" ? "Required" : true
+    },*/
+    /*{
+      title: "address", field: 'address',
+      validate: rowData => rowData.userType === undefined || rowData.fee === "" ? "Required" : true
+    }*/
+  
+  /*]
+  return (
+    <div className="App">
+      <h1 align="center">Contacts</h1>
+      <table
+        title="Student Details"
+        columns={columns}
+        data={data}
+        options={{ actionsColumnIndex: -1, addRowPosition: "first" }}
+        editable={{
+          onRowAdd: (newData) => new Promise((resolve, reject) => {
+            //Backend call
+            fetch(url, {
+              method: "POST",
+              headers: {
+                'Content-type': "application/json"
+              },
+              body: JSON.stringify(newData)
+            }).then(resp => resp.json())
+              .then(resp => {
+                getPerson()
+                resolve()
+              })
+          }),
+          onRowUpdate: (newData, oldData) => new Promise((resolve, reject) => {
+            //Backend call
+            fetch(url + "/" + oldData.id, {
+              method: "PUT",
+              headers: {
+                'Content-type': "application/json"
+              },
+              body: JSON.stringify(newData)
+            }).then(resp => resp.json())
+              .then(resp => {
+                getPerson()
+                resolve()
+              })
+          }),
+          onRowDelete: (oldData) => new Promise((resolve, reject) => {
+            //Backend call
+            fetch(url + "/" + oldData.id, {
+              method: "DELETE",
+              headers: {
+                'Content-type': "application/json"
+              },
+
+            }).then(resp => resp.json())
+              .then(resp => {
+                getPerson()
+                resolve()
+              })
+          })
+        }}
+      />
+    </div>
+  );
+}
+
+export default Pp;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { Component } from 'react';
 //import './App.css';
 //import { Container, Button, Alert } from 'react-bootstrap';
 import PersonList from './PersonList';
@@ -121,7 +272,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/
 
 
 

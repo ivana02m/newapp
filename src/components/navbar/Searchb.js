@@ -1,4 +1,4 @@
-import React, {Component}from "react";
+/*import React, {Component}from "react";
 import { useState,useEffect } from "react";
 
 
@@ -34,7 +34,7 @@ export default function Searchbar() {
       setFilterVal(e.target.value)
     }*/
 
-  const [value, setValue] = useState("");
+  /*const [value, setValue] = useState("");
 
 
 
@@ -47,9 +47,9 @@ export default function Searchbar() {
     setValue(searchTerm);
     // our api to fetch the search result
     console.log("search ", searchTerm);
-  };
+  };*/
 
-  return (
+  /*return (
     <div >
       <div className="search-container">
         <div className="search-inner">
@@ -82,4 +82,4 @@ export default function Searchbar() {
       </div>
     </div>
   );
-}
+*/

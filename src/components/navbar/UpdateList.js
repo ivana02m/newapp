@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 function UpdateList(props) {
     const modalIdentifier = 'update'+props.elementId
@@ -84,4 +84,4 @@ function UpdateList(props) {
     
   }
 
-  export default UpdateList;
+  export default UpdateList;*/

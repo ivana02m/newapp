@@ -1,10 +1,42 @@
 import React, { Component } from "react";
 import { useState } from "react";
 import Dropdown from "../Dropdown";
-import Searchfilter from "../../search-filter";
+import Search from "./Search";
 import "./home.css"
+
 //import DyTable from "./DyTable";
- 
+//import Searchfilter from "../../search-filter"; 
+
+
+
+export default function Home() {
+  const [selected, setSelected] = useState("UserType");
+  return (
+    <div className="App">
+     {/* custom dropdown menu */}
+      <p>User Type:</p> 
+      <Dropdown selected={selected} setSelected={setSelected} />
+      <Search></Search> 
+      
+      
+    </div>
+  );
+}
+
+   //
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*class Home extends Component {
   render() {
     const [selected, setSelected] = useState("Choose One");
@@ -30,25 +62,6 @@ import "./home.css"
 export default Home;*/
 
 
-
-export default function Home() {
-  const [selected, setSelected] = useState("UserType");
-  return (
-    <div className="App">
-     {/* custom dropdown menu */}
-      <p>User Type:</p> 
-      <Dropdown selected={selected} setSelected={setSelected} />
-       
-        <Searchfilter></Searchfilter>
-        
-
-
-         
-    </div>
-  );
-}
-
-
+//
 //{selected}
-
 //<DyTable></DyTable>

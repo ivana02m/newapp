@@ -1,5 +1,5 @@
 
-import React from 'react';
+/*import React from 'react';
 //import { Table, Button, Alert } from 'react-bootstrap';
 
 class PersonList extends React.Component {
@@ -105,4 +105,4 @@ class PersonList extends React.Component {
   }
 }
 
-export default PersonList;
+export default PersonList;*/

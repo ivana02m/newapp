@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 function DeleteList(props) {
     const modalIdentifier = 'delete'+props.elementId

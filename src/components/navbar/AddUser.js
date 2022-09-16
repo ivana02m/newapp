@@ -37,7 +37,6 @@ const getUser=async()=>{
       };*/
     const handleFormSubmit=async(e)=>{
        let response= await axios.person("http://localhost:3000/person", formData);
-
        if (response){
         alert("data submitted successfully")
        }else{
@@ -101,7 +100,6 @@ const getUser=async()=>{
                     placeholder="name"/>
                 </div>
 
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> User Type</label>
                     <input type="text"
@@ -111,7 +109,6 @@ const getUser=async()=>{
                     onChange={(e)=> setFormData({...formData, userType: e.target.value})}
                     placeholder="name"/>
                 </div>
-
 
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> Created Date</label>
@@ -190,9 +187,7 @@ const getUser=async()=>{
                       <button className="btn btn-danger" onClick={()=>handleDelete(user.id)}>Delete</button>
 
                     </td>
-
                 </tr>
-
                 })
             }
             </tbody>
@@ -225,7 +220,6 @@ const getUser=async()=>{
                     onChange={(e)=> setUpdateData({...updateData, name: e.target.value})}
                     placeholder="name"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> Surname</label>
                     <input type="text"
@@ -235,7 +229,6 @@ const getUser=async()=>{
                     onChange={(e)=> setUpdateData({...updateData, surname: e.target.value})}
                     placeholder="name"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> User Type</label>
                     <input type="text"
@@ -245,7 +238,6 @@ const getUser=async()=>{
                     onChange={(e)=> setUpdateData({...updateData, userType: e.target.value})}
                     placeholder="name"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> Created Date</label>
                     <input type="text"
@@ -255,7 +247,6 @@ const getUser=async()=>{
                     onChange={(e)=> setUpdateData({...updateData, createdDate: e.target.value})}
                     placeholder="name"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel"> City </label>
                     <input type="text"
@@ -265,7 +256,6 @@ const getUser=async()=>{
                     onChange={(e)=> setUpdateData({...updateData, city: e.target.value})}
                     placeholder="name"/>
                 </div>
-
                 <div class="mb-3">
                     <label for="examplefcinput1" class="formlabel">Address</label>
                     <input type="text"

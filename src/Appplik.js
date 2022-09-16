@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import './App.css';
 //import { Container, Button, Alert } from 'react-bootstrap';
 import PersonList from './PersonList';
@@ -103,4 +103,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/

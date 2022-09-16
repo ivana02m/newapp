@@ -1,10 +1,10 @@
 
 import axios from "axios";
-import {MDBTable, MDBTableHead, MDBTableBody, MDBRow, MDBCol, MDBContainer, MDBBtn} from "mdb-react-ui-kit";
+//import {MDBTable, MDBTableHead, MDBTableBody, MDBRow, MDBCol, MDBContainer, MDBBtn} from "mdb-react-ui-kit";
 import React, { useState, useEffect } from 'react';
 
 
-function Ssearch(){
+function Search(){
   const [data,setData ]=useState([]);
   const [value,setValue ]=useState("");
 
@@ -13,6 +13,7 @@ function Ssearch(){
     loadUsersData();
   },[] );
    
+
     const loadUsersData= async()=>{
       return await axios.get("http://localhost:3000/person")
       //return await fetch("http://localhost:3000/person")
@@ -26,7 +27,7 @@ function Ssearch(){
     const handleSearch=async(e)=>{
     e.preventDefault();
     return await axios.get(`http://localhost:3000/person?q=${value}`)
-    //return await fetch("http://localhost:3000/person")
+    //return await fetch("http://localhost:3000/person/:id", )
     .then((response)=>{
      setData(response.data);
      setValue("");
@@ -34,10 +35,11 @@ function Ssearch(){
     .catch((err)=>console.log(err));
      };
 
+
    return(
     <div>
-    <MDBContainer>
-    <form style={{ 
+      <div>
+      <form style={{ 
      margin:"auto" ,
       padding:"15px",
       maxWidth:"400px",
@@ -53,50 +55,49 @@ function Ssearch(){
       value={value}
       onChange={(e)=> setValue(e.target.value)}
       />
-      <MDBButton type="submit" color="dark">Search</MDBButton>
+      <button type="submit" color="dark">Search</button>
         <div>
-           <MDBRow>
-              <MDBCol>
-                <MDBTable>
-                  <MDBTableHead>
+           <div>
+              <div>
+                <table>
+                  <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>surname</th>
+                        <th>userType</th>
+                        <th>createdDate</th>
+                        <th>city</th>
+                        <th>address</th>
                       </tr>
-                  </MDBTableHead>
+                  </thead>
                   {data.length === 0 ? (
-                    <MDBtableBody>
+                    <tbody>
                     <tr>
-                     <td>Nod Data Found</td>
+                     <td>No Data Found</td>
                     </tr>
-                    </MDBtableBody>
+                    </tbody>
                   ):(
                     data.map((item,index)=>(
-                      <MDBTableBody key={index}>
+                      <tbody key={index}>
                       <tr> 
                        <th>{index+1}</th>
+                       <td>{item.id}</td>
                        <td>{item.name}</td>
-                       <td>{item.name}</td>
-                       <td>{item.name}</td>
-                       <td>{item.name}</td>
-                       <td>{item.name}</td>
-                       <td>{item.name}</td>
-                       <td>{item.name}</td>
+                       <td>{item.surname}</td>
+                       <td>{item.userType}</td>
+                       <td>{item.createdDate}</td>
+                       <td>{item.city}</td>
+                       <td>{item.address}</td>
                       </tr>
-                      </MDBTableBody>
+                      </tbody>
                     ))
                   )}
-                </MDBTable>
-              </MDBCol>
-          </MDBRow>
+                </table>
+              </div>
+          </div>
        </div>
-    </MDBContainer>
-    <div>
+    </div>
        <form style={{ 
          margin:"auto" ,
          padding:"15px",
@@ -113,11 +114,11 @@ function Ssearch(){
             value={value}
             onChange={(e)=> setValue(e.target.value)}
             />
-         <MDBButton type="submit" color="dark">Search</MDBButton>
+         <button type="submit" color="dark">Search</button>
         </form>   
         </div>
-        </div>     
+             
 )
 }
-export default Ssearch; 
+export default Search;
 
