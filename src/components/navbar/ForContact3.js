@@ -1,10 +1,14 @@
 import React from 'react'
 //import './user.css'
 
-const User = ({id,name,surname,userType,createdDate,city,address, onDelete}) => {
+const User = ({id,name,surname,userType,createdDate,city,address, onDelete, onEdit}) => {
 
     const handleDelete = () => {
         onDelete(id);
+    }
+
+    const handleEdit = (event,id)=>  {
+        onEdit(id);
     }
 
     return (
@@ -18,7 +22,7 @@ const User = ({id,name,surname,userType,createdDate,city,address, onDelete}) => 
             <span>{address}</span>
 
             <span>
-                <button>edit</button>
+                <button onClick={handleEdit}>edit</button>
                 <button onClick={handleDelete}>delete</button>
             </span>
         </div>

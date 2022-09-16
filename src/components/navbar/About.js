@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 //import Ssearch from "./Search"
-import AddUser from "./AddUser";
+//import AddUser from "./AddUser";
+import PersonApp from "./GradeApp";
  
 class About extends Component {
   render() {
     return (
       <div>
         <h2>About</h2>
-       <AddUser></AddUser> 
+       <PersonApp></PersonApp>
       </div>
     );
   }
@@ -15,7 +16,7 @@ class About extends Component {
  
 export default About;
 
-//
+//<AddUser></AddUser> 
 
 
 

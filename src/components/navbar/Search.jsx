@@ -15,19 +15,17 @@ function Search(){
    
 
     const loadUsersData= async()=>{
-      return await axios.get("http://localhost:3000/person")
-      //return await fetch("http://localhost:3000/person")
+      return await axios
+      .get("http://localhost:3000/person")
       .then((response)=>setData(response.data))
       .catch((err)=>console.log(err));
-      
     };
-      
     console.log("data", data);
 
     const handleSearch=async(e)=>{
     e.preventDefault();
     return await axios.get(`http://localhost:3000/person?q=${value}`)
-    //return await fetch("http://localhost:3000/person/:id", )
+   
     .then((response)=>{
      setData(response.data);
      setValue("");
@@ -78,10 +76,9 @@ function Search(){
                     </tr>
                     </tbody>
                   ):(
-                    data.map((item,index)=>(
-                      <tbody key={index}>
+                    data.map((item,id)=>(
+                      <tbody key={id}>
                       <tr> 
-                       <th>{index+1}</th>
                        <td>{item.id}</td>
                        <td>{item.name}</td>
                        <td>{item.surname}</td>
