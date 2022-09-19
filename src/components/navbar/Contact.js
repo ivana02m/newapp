@@ -1,12 +1,12 @@
 import React, {Component}from "react";
-import ForContact1 from "./ForContact1";
+
 
 class Contact extends Component {
   render() {
     return (
       <div>
         <h2>Contact</h2>
-        <ForContact1></ForContact1>
+        
       
        
       </div>
@@ -15,7 +15,6 @@ class Contact extends Component {
 }
  
 export default Contact;
-
 
 
 

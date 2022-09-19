@@ -4,10 +4,6 @@ import Dropdown from "../Dropdown";
 import Search from "./Search";
 import "./home.css"
 
-
-
-
-
 export default function Home() {
   const [selected, setSelected] = useState("UserType");
   return (

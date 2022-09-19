@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./person.css";
 
 class Person extends Component {
   constructor(props) {
@@ -115,107 +116,104 @@ class Person extends Component {
       !this.state.isUpdate
         ? (
           <tr key={id}>
-            <td className="td-name">
+            <td >
               {this.state.id}
             </td>
-            <td className="td-course">
+            <td >
               {this.state.name}
             </td>
-            <td className="td-grade">
+
+            <td >
+              {this.state.surname}
+            </td>
+            <td >
               {this.state.userType}
             </td>
-            <td className="td-name">
+            <td >
               {this.state.createdDate}
             </td>
-            <td className="td-course">
+            <td >
               {this.state.city}
             </td>
-            <td className="td-grade">
+            <td >
               {this.state.address}
             </td>
 
-            <td className="td-operation text-center">
+            <td >
               <button
                 onClick={() => this.handleUpdateStart()}
-                className="btn btn-outline-warning btn-update mr-2 ml-2"><i className="fas fa-pen">EDIT</i>
+                className="btn-upd "><i >EDIT</i>
               </button>
               <button
                 onClick={() => handleDelete(id)}
-                className="btn btn-outline-info btn-delete mr-2 ml-2"><i className="far fa-trash-alt">DELETE</i>
+                className=" btn-del"><i >DELETE</i>
               </button>
             </td>
           </tr>
         )
         : (
           <tr key={id}>
-            <td className="td-name">
+            <td >
               <input
                 autoFocus
-                className="input-custom"
                 type="text"
                 value={this.state.id}
                 onChange={this.handleIdChange}
               />
             </td>
-            <td className="td-course">
+            <td >
               <input
-                className="input-custom"
                 type="text"
                 value={this.state.name}
                 onChange={this.handleNameChange}
               />
             </td>
-            <td className="td-grade">
+            <td >
               <input
-                className="input-custom"
                 type="text"
                 value={this.state.surname}
                 onChange={this.handleSurnameChange}
               />
             </td>
 
-            <td className="td-name">
+            <td >
               <input
                 autoFocus
-                className="input-custom"
                 type="text"
                 value={this.state.userType}
                 onChange={this.handleUserTypeChange}
               />
             </td>
-            <td className="td-course">
+            <td >
               <input
-                className="input-custom"
                 type="text"
                 value={this.state.createdDate}
                 onChange={this.handleCreatedDateChange}
               />
             </td>
-            <td className="td-grade">
+            <td >
               <input
-                className="input-custom"
                 type="text"
                 value={this.state.city}
                 onChange={this.handleCityChange}
               />
             </td>
-            <td className="td-grade">
+            <td >
               <input
-                className="input-custom"
                 type="text"
                 value={this.state.address}
                 onChange={this.handleAddressChange}
               />
             </td>
 
-            <td className="td-operation text-center">
+            <td >
               <button
                 onClick={() => this.handleUpdate(id)}
-                className="btn btn-danger btn-update mr-2 ml-2"><i className="fas fa-pen">update</i>
+                className="btn btn-update"><i className="fas fa-pen">update</i>
               </button>
               <button
                 onClick={() => this.handleUpdateCancel()}
-                className="btn btn-warning btn-cancel mr-2 ml-2"><i className="fa fa-ban">delete</i>
+                className="btn btn-warning"><i className="fa fa-ban">delete</i>
               </button>
             </td>
           </tr>

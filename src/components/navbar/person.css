@@ -1,0 +1,29 @@
+
+  table {
+    border: 3px solid #092147;
+  
+  }
+
+
+  .btn-addd{
+    background-color:green;
+  
+  }
+
+  .btn-cancel{
+   background-color: yellow;
+  
+  }
+  
+
+  .btn-upd{
+    background-color:yellow;
+    font-weight: bold;
+  }
+
+  .btn-del{
+    background-color:red;
+    font-weight: bold;
+  
+  }
+

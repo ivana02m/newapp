@@ -3,8 +3,7 @@ import { useState } from "react";
 
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
-//import DisplayTable from "./components/navbar/DisplayTable";
-//import Dropdown from "./components/Dropdown";
+
 
 
 

@@ -1,7 +1,6 @@
-
 import axios from "axios";
-//import {MDBTable, MDBTableHead, MDBTableBody, MDBRow, MDBCol, MDBContainer, MDBBtn} from "mdb-react-ui-kit";
 import React, { useState, useEffect } from 'react';
+import "./person.css";
 
 
 function Search(){
@@ -13,19 +12,18 @@ function Search(){
     loadUsersData();
   },[] );
    
-
     const loadUsersData= async()=>{
-      return await axios
-      .get("http://localhost:3000/person")
+      return await axios.get("http://localhost:3000/person")
       .then((response)=>setData(response.data))
       .catch((err)=>console.log(err));
+      
     };
+      
     console.log("data", data);
 
     const handleSearch=async(e)=>{
     e.preventDefault();
     return await axios.get(`http://localhost:3000/person?q=${value}`)
-   
     .then((response)=>{
      setData(response.data);
      setValue("");
@@ -33,27 +31,11 @@ function Search(){
     .catch((err)=>console.log(err));
      };
 
-
    return(
     <div>
       <div>
-      <form style={{ 
-     margin:"auto" ,
-      padding:"15px",
-      maxWidth:"400px",
-      alignContent:"center",  
-      }}
-      className="cs"
-       onSubmit={handleSearch}
-      />
-      <input
-      type="text"
-      className="csc"
-      placeholder="search..."
-      value={value}
-      onChange={(e)=> setValue(e.target.value)}
-      />
-      <button type="submit" color="dark">Search</button>
+      
+      
         <div>
            <div>
               <div>
@@ -111,11 +93,10 @@ function Search(){
             value={value}
             onChange={(e)=> setValue(e.target.value)}
             />
-         <button type="submit" color="dark">Search</button>
+        <button type="submit" >Search</button>
         </form>   
         </div>
              
 )
 }
 export default Search;
-

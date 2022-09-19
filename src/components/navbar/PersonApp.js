@@ -1,7 +1,6 @@
 import React from 'react';
-//import Header from './header';
-import PersonTable from './GradeTable';
-import PersonForm from './GradeForm';
+import PersonTable from './PersonTable';
+import PersonForm from './PersonForm';
 
 class PersonApp extends React.Component {
   constructor(props) {
@@ -103,18 +102,18 @@ class PersonApp extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm">
+          <div className="col">
           </div>
         </div>
         <div className="row">
-          <div className="col-table-custom">
+          <div className="coll">
             <PersonTable
               person={this.state.person}
               handleUpdatePerson={this.updateCompletePerson}
               handleDelete={this.deletePerson}
             />
           </div>
-          <div className="col-form-custom">
+          <div className="col-form">
             <PersonForm onSubmit={this.addPerson} />
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./person.css";
 
 class PersonForm extends Component {
   constructor(props) {
@@ -13,13 +14,14 @@ class PersonForm extends Component {
       address: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleNameChange = this.handleIdChange.bind(this);
-    this.handleCourseChange = this.handleNameChange.bind(this);
-    this.handleGradeChange = this.handleSurnameChange.bind(this);
-    this.handleNameChange = this.handleUserTypeChange.bind(this);
-    this.handleCourseChange = this.handleCreatedDateChange.bind(this);
-    this.handleGradeChange = this.handleCityChange.bind(this);
-    this.handleGradeChange = this.handleAddressChange.bind(this);
+    this.handleIdChange = this.handleIdChange.bind(this);
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleSurnameChange = this.handleSurnameChange.bind(this);
+    this.handleUserTypeChange = this.handleUserTypeChange.bind(this);
+    this.handleCreatedDateChange = this.handleCreatedDateChange.bind(this);
+    this.handleCityChange = this.handleCityChange.bind(this);
+    this.handleAddressChange = this.handleAddressChange.bind(this);
+
     this.handleCancel = this.handleCancel.bind(this);
   }
   handleIdChange(event) {
@@ -108,95 +110,95 @@ class PersonForm extends Component {
     const { handleSubmit, handleIdChange, handleNameChange, handleSurnameChange, handleUserTypeChange, handleCreatedDateChange, handleCityChange, handleAddressChange,  handleCancel } = this;
     return (
       <form onSubmit={handleSubmit}>
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-user icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
             //required
             type="text"
             value={id}
-            className="form-control"
+            className="a"
             placeholder="id"
             onChange={handleIdChange} />
         </div>
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-list icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
            // required
             type="text"
-            //value={name}
-            className="form-control"
+            value={name}
+            className="b"
             placeholder="name"
             onChange={handleNameChange} />
         </div>
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-graduation-cap icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
            // required
             type="text"
-            //value={surname}
-            className="form-control"
+            value={surname}
+            className="c"
             placeholder="surname"
             onChange={handleSurnameChange} />
         </div>
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-graduation-cap icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
             //required
             type="text"
-            //value={userType}
-            className="form-control"
+            value={userType}
+            className="d"
             placeholder="userType"
             onChange={handleUserTypeChange} />
         </div>
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-graduation-cap icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
            // required
             type="text"
-           // value={createdDate}
-            className="form-control"
+           value={createdDate}
+            className="e"
             placeholder="createdDate"
             onChange={handleCreatedDateChange} />
         </div>
 
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-graduation-cap icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
             //required
             type="text"
-            //value={city}
-            className="form-control"
+            value={city}
+            className="f"
             placeholder="city"
             onChange={handleCityChange} />
         </div>
 
-        <div className="input-group mb-2">
-          <div className="input-group-prepend">
-            <i className="input-group-text fa fa-graduation-cap icon-custom"></i>
+        <div >
+          <div >
+            <i ></i>
           </div>
           <input
             required
             type="text"
-           //value={address}
-            className="form-control"
+            value={address}
+            className="g"
             placeholder="address"
             onChange={handleAddressChange} />
         </div>
         <div className="form-btn-box">
-          <button type="submit" className="btn btn-primary form-btn-add" onClick={handleSubmit}>Add</button>
-          <button type="button" onClick={handleCancel} className="btn btn-warning form-btn-cancel">Cancel</button>
+          <button type="submit" className="btn-addd " onClick={handleSubmit}>Add</button>
+          <button type="button" onClick={handleCancel} className=" btn-cancel">Cancel</button>
         </div>
       </form>
     );
