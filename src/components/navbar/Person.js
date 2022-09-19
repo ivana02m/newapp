@@ -209,11 +209,11 @@ class Person extends Component {
             <td >
               <button
                 onClick={() => this.handleUpdate(id)}
-                className="btn btn-update"><i >update</i>
+                className="btn-update"><i >update</i>
               </button>
               <button
                 onClick={() => this.handleUpdateCancel()}
-                className="btn btn-warning"><i >delete</i>
+                className=" btn-warning"><i >delete</i>
               </button>
             </td>
           </tr>

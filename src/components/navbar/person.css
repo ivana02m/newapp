@@ -9,6 +9,7 @@
   table {
     border-collapse: collapse;
     width: 100%;
+    color:#092147;
   }
   
   th,
@@ -21,6 +22,7 @@
   
   th {
     background-color: #1A488E;
+    color:antiquewhite;
   }
   
   td {
@@ -51,13 +53,13 @@
 
   .btn-addd{
     background-color:green;
-    size: 24px;
+    font-size:30px;
   
   }
 
   .btn-cancel{
-   background-color: yellow;
-   size: 24px;
+   background-color: darkgrey;
+   font-size: 20px;
    
   }
   
@@ -65,14 +67,26 @@
   .btn-upd{
     background-color:yellow;
     font-weight: bold;
-    size: 24px;
+    font-size: 24px;
 
   }
 
   .btn-del{
     background-color:red;
     font-weight: bold;
-    size: 24px;
+    font-size: 24px;
   
   }
 
+.btn-warning{
+    background-color:red;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+
+  .btn-update{
+    background-color:green;
+    font-weight: bold;
+    font-size: 20px;
+  }
