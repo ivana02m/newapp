@@ -45,8 +45,8 @@ function Search(){
                         <th>id</th>
                         <th>name</th>
                         <th>surname</th>
-                        <th>userType</th>
-                        <th>createdDate</th>
+                        <th>user type</th>
+                        <th>created date</th>
                         <th>city</th>
                         <th>address</th>
                       </tr>

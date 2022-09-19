@@ -1,6 +1,7 @@
 import React from 'react';
 import PersonTable from './PersonTable';
 import PersonForm from './PersonForm';
+import "./person.css";
 
 class PersonApp extends React.Component {
   constructor(props) {

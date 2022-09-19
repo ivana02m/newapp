@@ -1,29 +1,78 @@
 
-  table {
-    border: 3px solid #092147;
-  
+ .app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
   }
-
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #08355a;
+    text-align: left;
+    padding: 8px;
+    font-size: 32px;
+  }
+  
+  th {
+    background-color: #1A488E;
+  }
+  
+  td {
+    background-color: rgb(236, 243, 247);
+  }
+  
+  form {
+    display: flex;
+    gap: 5px;
+  }
+  
+  form td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  form * {
+    font-size: 20px;
+  }
+  
+  
+  table {
+    width:100%;
+    border: 3px solid #092147;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+ 
 
   .btn-addd{
     background-color:green;
+    size: 24px;
   
   }
 
   .btn-cancel{
    background-color: yellow;
-  
+   size: 24px;
+   
   }
   
 
   .btn-upd{
     background-color:yellow;
     font-weight: bold;
+    size: 24px;
+
   }
 
   .btn-del{
     background-color:red;
     font-weight: bold;
+    size: 24px;
   
   }
 
