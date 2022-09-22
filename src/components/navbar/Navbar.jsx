@@ -1,8 +1,9 @@
 import React, { Component, } from "react";
 import {
-  Route,
+  BrowserRouter as Router,
+  Route, Routes,
   NavLink,
-  HashRouter
+  //HashRouter
 } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -13,20 +14,21 @@ class Navbar extends Component {
   render() {
     return (
         <div>
-       <HashRouter>
+        <Router>
 <div>
   <div className="navbar">
-  <li><NavLink exact to="/">Home</NavLink></li>
+  <li><NavLink to="/" >Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/contact">Contact</NavLink></li>
 </div>
   <div className="content">
-  <Route exact path="/" component={Home}/>
-  <Route path="/about" component={About}/>
-  <Route path="/contact" component={Contact}/> 
+ 
+ <Routes><Route path="/" exact element={<Home/>}/> </Routes>
+ <Routes><Route path="/about" element={<About/>}/></Routes>
+ <Routes><Route path="/contact" element={<Contact/>}/></Routes>
   </div>
 </div>
-</HashRouter>
+</Router>
         </div>
     );
   }
