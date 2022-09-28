@@ -11,7 +11,7 @@ export default function Home() {
      {/* custom dropdown menu */}
       <p>User Type:</p> 
       <Dropdown selected={selected} setSelected={setSelected} />
-      <Search></Search> 
+      <Search/> 
       
       
     </div>

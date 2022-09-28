@@ -109,7 +109,7 @@ class PersonForm extends Component {
     const { id, name, surname, userType,createdDate, city, address} = this.state;
     const { handleSubmit, handleIdChange, handleNameChange, handleSurnameChange, handleUserTypeChange, handleCreatedDateChange, handleCityChange, handleAddressChange,  handleCancel } = this;
     return (
-      <form onSubmit={handleSubmit}>
+      <form className="main_content" onSubmit={handleSubmit}>
         <div >
           <div >
             <i ></i>

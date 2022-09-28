@@ -11,9 +11,8 @@ body {
   height: 100vh;
 }*/
 .dropdown {
-  width: 170px;
+  width: 100px;
   user-select: none;
-  position: relative;
 }
 
 .dropdown .dropdown-btn {

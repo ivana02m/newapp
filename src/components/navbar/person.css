@@ -1,5 +1,5 @@
 
- .app-container {
+ /*.app-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -8,7 +8,7 @@
   
   table {
     border-collapse: collapse;
-    width: 100%;
+    width: 100vw;
     color:#092147;
   }
   
@@ -31,36 +31,44 @@
   
   form {
     display: flex;
-    gap: 5px;
+    gap: 2px;
+    
   }
   
   form td:last-child {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-between;
   }
   
   form * {
     font-size: 20px;
-  }
+  }*/
   
   
   table {
-    width:100%;
-    border: 3px solid #092147;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+    /*margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom:20px;*/
+    /*border-collapse: collapse;*/
   }
  
-
+/*
   .btn-addd{
     background-color:green;
-    font-size:30px;
-  
+    font-size:27px;
+    color:white;
+    border-radius: 5px;
+    gap: 2px;
+    
   }
 
   .btn-cancel{
-   background-color: darkgrey;
-   font-size: 20px;
-   
+   background-color: #08355a;
+   font-size: 15px;
+   color:white;
+   border-radius: 5px;
+   font-style: italic;
   }
   
 
@@ -68,13 +76,16 @@
     background-color:yellow;
     font-weight: bold;
     font-size: 24px;
-
+    
+    border-radius: 5px;
   }
-
+/*
   .btn-del{
     background-color:red;
     font-weight: bold;
     font-size: 24px;
+    color:white;
+    border-radius: 5px;
   
   }
 
@@ -82,6 +93,8 @@
     background-color:red;
     font-weight: bold;
     font-size: 20px;
+    color:white;
+    border-radius: 5px;
   }
 
 
@@ -89,4 +102,14 @@
     background-color:green;
     font-weight: bold;
     font-size: 20px;
+    color:white;
+    border-radius: 5px;
+  }*/
+
+
+  .main_content_ss{
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left:15%;
+    padding-bottom: 2px;
   }

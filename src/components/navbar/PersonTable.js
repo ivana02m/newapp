@@ -12,19 +12,20 @@ class PersonTable extends Component {
 
     return this.props.person.length
       ? (
-        <table className="tablet">
+        <table className="main_content">
           <thead >
             <tr>
               <th >id</th>
               <th >name</th>
               <th >surname</th>
-              <th >userType</th>
-              <th >createdDate</th>
+              <th >user Type</th>
+              <th >created Date</th>
               <th >city</th>
               <th >adddress</th>
             </tr>
-          </thead>
-          <tbody>
+           </thead>
+            <tbody>
+        
             {
               person.map(person => {
                 return (
@@ -44,18 +45,22 @@ class PersonTable extends Component {
                 );
               })
             }
+            
+       
           </tbody>
-        </table>
+          </table>  
+        
       )
-      : (
-        <table >
+    
+     : (
+        <table className="main_content"  >
           <thead>
             <tr>
               <th >Id</th>
               <th >Name</th>
               <th >Surname</th>
               <th >usertype</th>
-              <th >createdDate</th>
+              <th >created Date</th>
               <th >city</th>
               <th >address</th>
             </tr>
@@ -66,9 +71,10 @@ class PersonTable extends Component {
             </tr>
           </tbody>
         </table>
-      );
-  }
+      )
+   
+    }   
+  
 }
-
 
 export default PersonTable;

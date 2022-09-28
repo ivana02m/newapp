@@ -11,8 +11,8 @@ export default function App() {
   const [selected, setSelected] = useState("Choose One");
   return (
     <div className="App">
-          <Header></Header>
-          <Navbar></Navbar>
+          <Header/>
+          <Navbar/>
       
 
 
@@ -20,12 +20,3 @@ export default function App() {
   );
 }
 
-
-
- /*{/* custom dropdown menu */
- /*  <Dropdown selected={selected} setSelected={setSelected} />
-     <br />
-     <br />
-    <br />
-     {selected}*/
-     /*<Searchfilter></Searchfilter>*/

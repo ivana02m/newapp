@@ -15,11 +15,13 @@ class Navbar extends Component {
     return (
         <div>
         <Router>
-<div>
-  <div className="navbar">
+<div className="wrapper">
+  <div className="sidebar">
+    <ul>
   <li><NavLink to="/" >Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/contact">Contact</NavLink></li>
+  </ul>
 </div>
   <div className="content">
  

@@ -35,11 +35,29 @@ function Search(){
     <div>
       <div>
       
-      
+      <form style={{ 
+         margin:"auto" ,
+         padding:"15px",
+         maxWidth:"400px",
+         alignContent:"center",  
+         }}
+         className="main_content_ss"
+         onSubmit={handleSearch}
+         >  
+            <input
+            type="text"
+            className="main_content_ss"
+            placeholder="search..."
+            value={value}
+            onChange={(e)=> setValue(e.target.value)}
+            />
+        <button className="main_content_ss" type="submit" >Search</button>
+        </form>   
+        </div>
         <div>
            <div>
               <div>
-                <table>
+                <table className="main_content">
                   <thead>
                       <tr>
                         <th>id</th>
@@ -77,25 +95,7 @@ function Search(){
           </div>
        </div>
     </div>
-       <form style={{ 
-         margin:"auto" ,
-         padding:"15px",
-         maxWidth:"400px",
-         alignContent:"center",  
-         }}
-         className="cs"
-         onSubmit={handleSearch}
-         >  
-            <input
-            type="text"
-            className="csc"
-            placeholder="search..."
-            value={value}
-            onChange={(e)=> setValue(e.target.value)}
-            />
-        <button type="submit" >Search</button>
-        </form>   
-        </div>
+       
              
 )
 }

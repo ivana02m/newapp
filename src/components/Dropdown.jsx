@@ -4,10 +4,10 @@ function Dropdown({ selected, setSelected }) {
   const [isActive, setIsActive] = useState(false);
   const options = ["Employee", "Programmer","Wizard"];
   return (
-    <div className="dropdown">
+    <div className="main_content">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
         {selected}
-        <span className="fas fa-caret-down"></span>
+        <span className="ddown"></span>
       </div>
       {isActive && (
         <div className="dropdown-content">
