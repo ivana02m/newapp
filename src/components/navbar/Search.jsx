@@ -13,7 +13,7 @@ function Search(){
   },[] );
    
     const loadUsersData= async()=>{
-      return await axios.get("http://localhost:3000/person")
+      return await axios.get("http://localhost:3000/persons")
       .then((response)=>setData(response.data))
       .catch((err)=>console.log(err));
       
@@ -23,7 +23,7 @@ function Search(){
 
     const handleSearch=async(e)=>{
     e.preventDefault();
-    return await axios.get(`http://localhost:3000/person?q=${value}`)
+    return await axios.get(`http://localhost:3000/persons?q=${value}`)
     .then((response)=>{
      setData(response.data);
      setValue("");

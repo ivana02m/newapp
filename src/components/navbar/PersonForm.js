@@ -1,4 +1,49 @@
-import React, { Component } from 'react';
+import React from "react";
+import "./person.css";
+
+export const PersonForm = ({ onAdd }) => {
+  const handleOnSubmit = (evt) => {
+    evt.preventDefault();
+    onAdd(evt.target.name.value, evt.target.surname.value, evt.target.userType.value, evt.target.createdDate.value, evt.target.city.value, evt.target.address.value, );
+    evt.target.name.value = "";
+    evt.target.surname.value = "";
+    evt.target.userType.value = "";
+    evt.target.createdDate.value = "";
+    evt.target.city.value = "";
+    evt.target.address.value = "";
+  };
+
+  return (
+    <form onSubmit={handleOnSubmit}>
+      <h3>Person</h3>
+      <input placeholder="name" name="name"/>
+      <input placeholder="surname" name="surname"/>
+      <input placeholder="userType" name="userType"/>
+      <input placeholder="createdDate" name="createdDate"/>
+      <input placeholder="city" name="city"/>
+      <input placeholder="address" name="address"/>
+      <button className="ad" onSubmit={handleOnSubmit}>Add</button>
+      <hr />
+    </form>
+  );
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { Component } from 'react';
 import "./person.css";
 
 class PersonForm extends Component {
@@ -205,4 +250,4 @@ class PersonForm extends Component {
   }
 }
 
-export default PersonForm;
+export default PersonForm;*/

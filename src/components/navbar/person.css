@@ -115,3 +115,26 @@
     color: #666;
     border-radius: 5px;
   }
+
+  .m{
+    /*border:1px solid purple;*/
+    padding:30 px;
+
+  }
+
+  .ed{
+    font-size: 15px;
+    margin:5px;
+    
+  }
+
+
+  .del{
+    font-size: 15px;
+    margin:5px;
+  }
+
+  .ad{
+    font-size: 15px;
+    margin:5px;
+  }

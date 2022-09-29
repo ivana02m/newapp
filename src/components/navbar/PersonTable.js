@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import Person from './Person';
 import "./person.css"
 
@@ -78,4 +78,4 @@ class PersonTable extends Component {
   
 }
 
-export default PersonTable;
+export default PersonTable;*/
