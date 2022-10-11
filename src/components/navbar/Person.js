@@ -58,7 +58,6 @@ export const Person = ({ id, name, surname, userType, createdDate, city, address
             <button className="del"onClick={handleDelete}>Delete</button>
           </div>
           </table>
-
         </div>
       )}
     </div>
