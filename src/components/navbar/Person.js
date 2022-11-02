@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import "./person.css"
+import "./person.css";
+
 
 export const Person = ({ id, name, surname, userType, createdDate, city, address, onEdit, onDelete }) => {
   const [isEdit, setIsEdit] = useState(false);

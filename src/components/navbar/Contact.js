@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
- export default function Contact() {
+ 
+
+export default function Contact() {
   return(
-     <div >
+     <div>
+   Contact
+ 
 
-      <h2>Contact</h2>
-
-    </div>
+  </div>
 )
 };
+
 
 
 

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { useState } from "react";
 import Dropdown from "../Dropdown";
 import Search from "./Search";
+import Pagination from "./Pagination";
+
+
 
 export default function Home() {
   const [selected, setSelected] = useState("UserType");
@@ -11,7 +14,7 @@ export default function Home() {
       <p>User Type:</p> 
       <Dropdown selected={selected} setSelected={setSelected} />
       <Search/> 
-      
+      <Pagination/>
       
     </div>
   );

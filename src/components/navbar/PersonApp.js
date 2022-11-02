@@ -6,7 +6,7 @@ import "./person.css";
 
 export default function PersonApp() {
   const [persons, setPersons] = useState([]);
-
+  
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,6 +17,8 @@ export default function PersonApp() {
       .then((data) => setPersons(data))
       .catch((error) => console.log(error));
   };
+
+
 
   const onAdd = async (id, name, surname, userType, createdDate, city, address ) => {
     await fetch("http://localhost:3000/persons", {
@@ -114,6 +116,7 @@ export default function PersonApp() {
     <div className="main_content">
       <PersonForm onAdd={onAdd} />
       {persons.map((person) => (
+        <table>
         <Person
           id={person.id}
           key={person.id}
@@ -127,7 +130,12 @@ export default function PersonApp() {
           onEdit={onEdit}
           onDelete={onDelete}
         />
-      ))}
-    </div>
-  );
-}
+        </table>)
+      )
+      };
+      </div>
+  )
+}  
+
+
+
