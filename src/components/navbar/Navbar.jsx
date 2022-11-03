@@ -13,25 +13,24 @@ import "./navbar.css";
 class Navbar extends Component {
   render() {
     return (
-        <div>
-        <Router>
-<div className="wrapper">
-  <div className="sidebar">
-    <ul>
-  <li><NavLink to="/" >Home</NavLink></li>
-    <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/contact">Contact</NavLink></li>
-  </ul>
-</div>
-  <div className="content">
- 
- <Routes><Route path="/" exact element={<Home/>}/> </Routes>
- <Routes><Route path="/about" element={<About/>}/></Routes>
- <Routes><Route path="/contact" element={<Contact/>}/></Routes>
-  </div>
-</div>
-</Router>
-        </div>
+      <div>
+          <Router>
+            <div className="wrapper" style={{ display: 'flex' }}>
+              <div className="sidebar">
+                <ul>
+                <li><NavLink to="/" >Home</NavLink></li>
+                  <li><NavLink to="/about">About</NavLink></li>
+                  <li><NavLink to="/contact">Contact</NavLink></li>
+                </ul>
+              </div>
+              <div className="content">    
+                <Routes><Route path="/" exact element={<Home/>}/> </Routes>
+                <Routes><Route path="/about" element={<About/>}/></Routes>
+                <Routes><Route path="/contact" element={<Contact/>}/></Routes>
+              </div>
+            </div>
+          </Router>
+      </div>
     );
   }
 }

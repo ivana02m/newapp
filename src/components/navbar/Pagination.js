@@ -1,29 +1,30 @@
 import React, {useState, useEffect} from "react";
+
 import axios from "axios";
 import Post from "./Post";
-import "./navbar.css";
+//import "./navbar.css";
 
-const Pagination =()=>{
+export default function Pagination(){
     const [persons, setPersons]= useState([]);
     const [loading, setLoading]= useState(false);
     const [currentPage, setCurrentPage]= useState(1);
-    const [personPerPage]= useState(3);
-    const [totalPersons, setTotalPersons]= useState(0);
+    const [postPerPage]= useState(10);
+    const [totalPosts, setTotalPosts]= useState(0);
 
    useEffect(()=> {
     const loadPerson= async ()=>{
         setLoading(true);
-        const response=await axios.get("http://localhost:3000/persons");
+        const response= await axios.get("http://localhost:3000/persons");
         setPersons(response.data);
-        setTotalPersons(response.data.length);
+        setTotalPosts(response.data.length);
         setLoading(false);
     };
     loadPerson();
    }, []);
 
-    const indexOfLastPerson= currentPage + personPerPage;
-    const indexOfFirstPerson= indexOfLastPerson - personPerPage;
-    const currentPersons=persons.slice(indexOfFirstPerson, indexOfLastPerson);
+    const indexOfLastPost= currentPage + postPerPage;
+    const indexOfFirstPost= indexOfLastPost - postPerPage;
+    const currentPosts=persons.slice(indexOfFirstPost, indexOfLastPost);
 
     const paginate= (pageNum)=> setCurrentPage(pageNum);
 
@@ -33,8 +34,8 @@ const Pagination =()=>{
     const showPagination=()=>{
         return(
             <Post
-            personPerPage={personPerPage}
-            totalPersons={totalPersons}
+            postPerPage={postPerPage}
+            totalPosts={totalPosts}
             currentPage={currentPage}
             paginate={paginate}
             prevPage={prevPage}
@@ -42,21 +43,28 @@ const Pagination =()=>{
             />  
         );
     };
-   console.log("persons ===>", persons);
+   //console.log("persons ===>", persons);
    return(
     <>
+    <h2>All</h2>
     <ul className="list-group">
     {!loading 
-    ? persons.map(person=>(
-        <li key={person.id} className="list-group-item">{person.id}</li>
+    ? currentPosts.map(person=>(
+        <li key={person.id} className="list-group-item">{person.id}  {person.name} {person.surname} {person.userType}  {person.createdDate}  {person.userType}  {person.createdDate}  {person.city}  {person.address} </li>
+    
     )):"Loading..."}
     </ul>
     <div>{showPagination()}</div>
     </>
    );
-   
+
    };
-   export default Pagination;
+   
+
+
+
+   
+
 
 
 

@@ -1,9 +1,9 @@
 import React from "react";
 
-const Post=(props)=>{
+export default function Post(props){
     const {
-    personPerPage,
-    totalPersons,
+    postPerPage,
+    totalPosts,
     currentPage,
     paginate,
     prevPage,
@@ -11,12 +11,12 @@ const Post=(props)=>{
     }=props;
     const pageNumbers=[];
 
-    for(let i=1; i<=Math.ceil(totalPersons/personPerPage); i++) {
+    for(let i=1; i<=Math.ceil(totalPosts/postPerPage); i++) {
         pageNumbers.push(i);
     }
     return (
         <nav>
-           <div className="pagination justify-content-center">
+           <div className="pagination justify-content-center"style={{display: "flex"}} >
            {currentPage !==1 && (
             <li>
                 <button 
@@ -56,4 +56,3 @@ const Post=(props)=>{
     );
 };
 
-export default Post;
