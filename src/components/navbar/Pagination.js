@@ -8,7 +8,7 @@ export default function Pagination(){
     const [persons, setPersons]= useState([]);
     const [loading, setLoading]= useState(false);
     const [currentPage, setCurrentPage]= useState(1);
-    const [postPerPage]= useState(10);
+    const [postPerPage]= useState(5);
     const [totalPosts, setTotalPosts]= useState(0);
 
    useEffect(()=> {
@@ -22,7 +22,7 @@ export default function Pagination(){
     loadPerson();
    }, []);
 
-    const indexOfLastPost= currentPage + postPerPage;
+    const indexOfLastPost= currentPage * postPerPage;
     const indexOfFirstPost= indexOfLastPost - postPerPage;
     const currentPosts=persons.slice(indexOfFirstPost, indexOfLastPost);
 
@@ -46,11 +46,11 @@ export default function Pagination(){
    //console.log("persons ===>", persons);
    return(
     <>
-    <h2>All</h2>
+    <h2>All People</h2>
     <ul className="list-group">
     {!loading 
     ? currentPosts.map(person=>(
-        <li key={person.id} className="list-group-item">{person.id}  {person.name} {person.surname} {person.userType}  {person.createdDate}  {person.userType}  {person.createdDate}  {person.city}  {person.address} </li>
+        <li key={person.id} className="list-group-item" style={{border: "1px solid purple"}}>{person.id}  {person.name} {person.surname} {person.userType}  {person.createdDate}  {person.userType}  {person.createdDate}  {person.city}  {person.address} </li>
     
     )):"Loading..."}
     </ul>

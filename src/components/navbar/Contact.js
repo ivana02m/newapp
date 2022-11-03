@@ -6,7 +6,7 @@ import Pagination from "./Pagination"
 
 export default function Contact() {
   return(
-     <div className="aaaaaaa" style={{ marginLeft: 300,   }}>
+     <div className="aaaaaaa" style={{ marginLeft: 250,   }}>
 
    <Pagination/>
   </div>

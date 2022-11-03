@@ -34,8 +34,10 @@ export const Person = ({ id, name, surname, userType, createdDate, city, address
           <button onSubmit={handleOnEditSubmit}>Save</button>
         </form>
       ) : (
+        <div>
         <div className="main_">
           <table className="m">
+            <thead>
             <tr>
             <th>id</th>
             <th>name</th>
@@ -45,20 +47,22 @@ export const Person = ({ id, name, surname, userType, createdDate, city, address
             <th>city</th>
             <th>address</th>
             </tr>
-             <tr>
-              <td>{id}</td>
-              <td>{name}</td>
-              <td>{surname}</td> 
-              <td>{userType}</td>
-              <td>{createdDate}</td>
-              <td>{city}</td> 
-              <td>{address}</td> 
+            </thead>
+          <tbody key={id}>
+            <tr>
+             <td>{id}</td> 
+             <td>{name}</td> 
+             <td>{surname}</td> 
+             <td>{userType}</td>
+             <td>{createdDate}</td>
+             <td>{address}</td>
+             <td>{city}</td> 
+              <button className="ed" onClick={handleEdit}>Edit</button>
+              <button className="del"onClick={handleDelete} >Delete</button> 
              </tr>   
-          <div>
-            <button className="ed" onClick={handleEdit}>Edit</button>
-            <button className="del"onClick={handleDelete}>Delete</button>
-          </div>
+           </tbody>
           </table>
+        </div>
         </div>
       )}
     </div>
